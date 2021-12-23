@@ -8,29 +8,24 @@
 import Foundation
 import UIKit
 
-let imageCache = NSCache<AnyObject, AnyObject>()
-var imageUrlString : String?
-
 extension UIImageView{
     
-    
     func loadThumbnail(url: URL) {
-        
-        imageUrlString = url.absoluteString
-        
-        let stringUrl = url.absoluteString
-        if let imageFromCache = imageCache.object(forKey: stringUrl as NSString) as? UIImage{
-            self.image = imageFromCache
-            return
-        }
-        DispatchQueue.main.async { [weak self] in
-            if let data = try? Data(contentsOf: url) {
-                    if let imageToCache = UIImage(data: data) {
-                        if imageUrlString == url.absoluteString{
-                            self?.self.image = imageToCache
+        let cache = URLCache.shared
+        let request = URLRequest(url: url)
+        if let data = cache.cachedResponse(for: request)?.data, let image = UIImage(data: data) {
+            self.image = image
+        } else {
+            DispatchQueue.global().async {
+                URLSession.shared.dataTask(with: request, completionHandler: { (data, response, error) in
+                    if let data = data, let response = response, ((response as? HTTPURLResponse)?.statusCode ?? 500) < 300, let image = UIImage(data: data) {
+                        let cachedData = CachedURLResponse(response: response, data: data)
+                        cache.storeCachedResponse(cachedData, for: request)
+                        DispatchQueue.main.async {
+                            self.image = image
                         }
-                        imageCache.setObject(imageToCache, forKey: url.absoluteString as NSString)
                     }
+                }).resume()
             }
         }
     }
@@ -47,14 +42,4 @@ extension UIImageView{
         }
     }
     
-    func setImageFromUrl(ImageURL :String) {
-       URLSession.shared.dataTask( with: NSURL(string:ImageURL)! as URL, completionHandler: {
-          (data, response, error) -> Void in
-          DispatchQueue.main.async {
-             if let data = data {
-                self.image = UIImage(data: data)
-             }
-          }
-       }).resume()
-    }
 }

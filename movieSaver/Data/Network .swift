@@ -38,13 +38,10 @@ enum API {
             return "movie/\(movieID)?api_key=\(apiKey)"
         }
     }
-    //https://api.themoviedb.org/3/movie/268?api_key=5e93e2eec20cf31971792d733ac51406&language=en-US
-    //search/movie?api_key=5e93e2eec20cf31971792d733ac51406&query=batman
     
     var baseURL: URL? {
         let serverURL = "https://api.themoviedb.org/3/"
         return URL(string: serverURL + self.apiUrl )
-        print(serverURL + self.apiUrl)
     }
 }
 

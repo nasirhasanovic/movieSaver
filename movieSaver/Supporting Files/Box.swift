@@ -6,7 +6,7 @@
 //
 
 import Foundation
-
+//MARK: - Class for data observing
 class Box<T> {
     typealias Listener = (T) -> Void
     var listener: Listener?

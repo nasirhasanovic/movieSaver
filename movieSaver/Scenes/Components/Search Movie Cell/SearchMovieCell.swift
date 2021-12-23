@@ -10,11 +10,7 @@ import UIKit
 class SearchMovieCell: UITableViewCell {
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var yearLabel: UILabel!
-    @IBOutlet weak var posterImg: UIImageView!{
-        didSet{
-            posterImg.layer.cornerRadius = 6
-        }
-    }
+    @IBOutlet weak var gradeLabel: UILabel!
     
     private var imgBase = "https://www.themoviedb.org/t/p/original"
     override func awakeFromNib() {
@@ -32,9 +28,13 @@ class SearchMovieCell: UITableViewCell {
     func setup(results: Results){
         titleLabel.text = results.title
         yearLabel.text = results.releaseDate
-        if let posterUrl = results.posterPath{
-            posterImg.setImageFromUrl(ImageURL: imgBase + posterUrl)
-        }
+        gradeLabel.text = String(format: "%.2f", results.voteAverage ?? 0.0)
+    }
+    
+    func setupDeleted(movies: MovieDetailsModel){
+        titleLabel.text = movies.title
+        yearLabel.text = movies.releaseDate
+        gradeLabel.text = String(format: "%.2f", movies.voteAverage ?? 0.0)
     }
     
 }

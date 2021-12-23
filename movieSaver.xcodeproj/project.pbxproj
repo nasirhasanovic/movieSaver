@@ -26,12 +26,17 @@
 		8441E0A527714A860046B9CD /* MyMovieCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8441E0A327714A860046B9CD /* MyMovieCell.xib */; };
 		8441E0AA277157890046B9CD /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8441E0A8277157890046B9CD /* SearchViewController.swift */; };
 		8441E0AB277157890046B9CD /* SearchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8441E0A9277157890046B9CD /* SearchViewController.xib */; };
+		848E7D502775243500E12AB3 /* Device Manager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848E7D4F2775243500E12AB3 /* Device Manager.swift */; };
 		84B3B7CD277284DB00FB6F82 /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B3B7CC277284DB00FB6F82 /* SearchViewModel.swift */; };
 		84B3B7D127728D0D00FB6F82 /* SearchMovieCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B3B7CF27728D0D00FB6F82 /* SearchMovieCell.swift */; };
 		84B3B7D227728D0D00FB6F82 /* SearchMovieCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84B3B7D027728D0D00FB6F82 /* SearchMovieCell.xib */; };
 		84B3B7D6277295CA00FB6F82 /* MovieDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B3B7D4277295CA00FB6F82 /* MovieDetailsViewController.swift */; };
 		84B3B7D7277295CA00FB6F82 /* MovieDetailsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84B3B7D5277295CA00FB6F82 /* MovieDetailsViewController.xib */; };
 		84B3B7D927729CDA00FB6F82 /* MovieDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B3B7D827729CDA00FB6F82 /* MovieDetailsViewModel.swift */; };
+		84CD4B9D2773870A0091616F /* HiddenMoviesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CD4B9B2773870A0091616F /* HiddenMoviesViewController.swift */; };
+		84CD4B9E2773870A0091616F /* HiddenMoviesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84CD4B9C2773870A0091616F /* HiddenMoviesViewController.xib */; };
+		84CD4BA0277388050091616F /* HiddenMovieViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CD4B9F277388050091616F /* HiddenMovieViewModel.swift */; };
+		84D079752773E17300CA6F87 /* NoConnectionExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D079742773E17300CA6F87 /* NoConnectionExtension.swift */; };
 		84EE77432772822C00A1A14D /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84EE77422772822C00A1A14D /* MainViewModel.swift */; };
 /* End PBXBuildFile section */
 
@@ -57,12 +62,17 @@
 		8441E0A327714A860046B9CD /* MyMovieCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyMovieCell.xib; sourceTree = "<group>"; };
 		8441E0A8277157890046B9CD /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		8441E0A9277157890046B9CD /* SearchViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchViewController.xib; sourceTree = "<group>"; };
+		848E7D4F2775243500E12AB3 /* Device Manager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Device Manager.swift"; sourceTree = "<group>"; };
 		84B3B7CC277284DB00FB6F82 /* SearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
 		84B3B7CF27728D0D00FB6F82 /* SearchMovieCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchMovieCell.swift; sourceTree = "<group>"; };
 		84B3B7D027728D0D00FB6F82 /* SearchMovieCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchMovieCell.xib; sourceTree = "<group>"; };
 		84B3B7D4277295CA00FB6F82 /* MovieDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailsViewController.swift; sourceTree = "<group>"; };
 		84B3B7D5277295CA00FB6F82 /* MovieDetailsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MovieDetailsViewController.xib; sourceTree = "<group>"; };
 		84B3B7D827729CDA00FB6F82 /* MovieDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailsViewModel.swift; sourceTree = "<group>"; };
+		84CD4B9B2773870A0091616F /* HiddenMoviesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HiddenMoviesViewController.swift; sourceTree = "<group>"; };
+		84CD4B9C2773870A0091616F /* HiddenMoviesViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HiddenMoviesViewController.xib; sourceTree = "<group>"; };
+		84CD4B9F277388050091616F /* HiddenMovieViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HiddenMovieViewModel.swift; sourceTree = "<group>"; };
+		84D079742773E17300CA6F87 /* NoConnectionExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoConnectionExtension.swift; sourceTree = "<group>"; };
 		84EE77422772822C00A1A14D /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -135,6 +145,8 @@
 			isa = PBXGroup;
 			children = (
 				8441E092277139340046B9CD /* Image+Extension.swift */,
+				84D079742773E17300CA6F87 /* NoConnectionExtension.swift */,
+				848E7D4F2775243500E12AB3 /* Device Manager.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -154,6 +166,7 @@
 				84EE77422772822C00A1A14D /* MainViewModel.swift */,
 				84B3B7CC277284DB00FB6F82 /* SearchViewModel.swift */,
 				84B3B7D827729CDA00FB6F82 /* MovieDetailsViewModel.swift */,
+				84CD4B9F277388050091616F /* HiddenMovieViewModel.swift */,
 			);
 			path = "View Model";
 			sourceTree = "<group>";
@@ -161,8 +174,9 @@
 		8441E096277139800046B9CD /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
-				84B3B7D3277295A600FB6F82 /* Movie Details */,
+				84CD4B9A277386EC0091616F /* Hidden Movies */,
 				8441E0972771398A0046B9CD /* Components */,
+				84B3B7D3277295A600FB6F82 /* Movie Details */,
 				8441E0A72771576A0046B9CD /* Search  */,
 				8441E0A62771574E0046B9CD /* Main ViewController */,
 			);
@@ -213,6 +227,15 @@
 				84B3B7D5277295CA00FB6F82 /* MovieDetailsViewController.xib */,
 			);
 			path = "Movie Details";
+			sourceTree = "<group>";
+		};
+		84CD4B9A277386EC0091616F /* Hidden Movies */ = {
+			isa = PBXGroup;
+			children = (
+				84CD4B9B2773870A0091616F /* HiddenMoviesViewController.swift */,
+				84CD4B9C2773870A0091616F /* HiddenMoviesViewController.xib */,
+			);
+			path = "Hidden Movies";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -280,6 +303,7 @@
 				84B3B7D7277295CA00FB6F82 /* MovieDetailsViewController.xib in Resources */,
 				8441E07C277135080046B9CD /* Main.storyboard in Resources */,
 				8441E0A127714A4D0046B9CD /* MainViewController.xib in Resources */,
+				84CD4B9E2773870A0091616F /* HiddenMoviesViewController.xib in Resources */,
 				8441E0A527714A860046B9CD /* MyMovieCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -292,9 +316,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				8441E09B277145F70046B9CD /* SearchMovieModel.swift in Sources */,
+				84CD4BA0277388050091616F /* HiddenMovieViewModel.swift in Sources */,
+				848E7D502775243500E12AB3 /* Device Manager.swift in Sources */,
 				8441E0A027714A4D0046B9CD /* MainViewController.swift in Sources */,
 				8441E099277139D20046B9CD /* MovieWorker.swift in Sources */,
 				8441E093277139340046B9CD /* Image+Extension.swift in Sources */,
+				84CD4B9D2773870A0091616F /* HiddenMoviesViewController.swift in Sources */,
 				8441E07F277135080046B9CD /* movieSaver.xcdatamodeld in Sources */,
 				8441E079277135080046B9CD /* ViewController.swift in Sources */,
 				84B3B7D127728D0D00FB6F82 /* SearchMovieCell.swift in Sources */,
@@ -308,6 +335,7 @@
 				8441E075277135080046B9CD /* AppDelegate.swift in Sources */,
 				8441E077277135080046B9CD /* SceneDelegate.swift in Sources */,
 				8441E09D277147290046B9CD /* MovieDetailModel.swift in Sources */,
+				84D079752773E17300CA6F87 /* NoConnectionExtension.swift in Sources */,
 				84B3B7D6277295CA00FB6F82 /* MovieDetailsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -457,11 +485,13 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = ZK3778VH39;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = movieSaver/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -484,11 +514,13 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = ZK3778VH39;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = movieSaver/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (

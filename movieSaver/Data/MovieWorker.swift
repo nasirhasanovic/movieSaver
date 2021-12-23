@@ -3,14 +3,13 @@
 //  movieSaver
 //
 //  Created by NasirHasanovic on 20. 12. 2021..
-//
 
 
 import Foundation
 
 class MoviewWorker{
     func getMovieDetails(id: Int, success: @escaping (MovieDetailsModel) -> Void, failure: @escaping (Error)  -> Void){
-
+        
         URLSession.shared.request(
             api: .fetchMovie(id),
             expecting: MovieDetailsModel.self,
@@ -21,14 +20,13 @@ class MoviewWorker{
                 case .failure(let error):
                     failure(error)
                 case .success(let movie):
-                    print(movie)
                     success(movie)
                 }
             })
     }
-
+    
     func searchMovies(movieName: String, success: @escaping (SearchMoviesModel) -> Void, failure: @escaping (Error)  -> Void){
-
+        
         URLSession.shared.request(
             api: .searchMovie(movieName),
             expecting: SearchMoviesModel.self,
@@ -39,11 +37,10 @@ class MoviewWorker{
                 case .failure(let error):
                     failure(error)
                 case .success(let movies):
-                    print(movies)
                     success(movies)
                 }
             })
     }
-
+    
 }
 

@@ -23,7 +23,12 @@ class SearchViewController: UIViewController {
         setUI()
     }
     
-    func setTableView(){
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        loadDeletedMovies()
+    }
+    
+    func setTableView() {
         self.moviesTable.delegate = self
         self.moviesTable.dataSource = self
         self.moviesTable.rowHeight = 60
@@ -44,13 +49,31 @@ class SearchViewController: UIViewController {
         searchField.rightViewMode = .always
     }
     
+    func loadDeletedMovies() {
+        let path = dataFilePath(fileName: "Hidden.plist")
+        if let data = try? Data(contentsOf: path) {
+            let decoder = PropertyListDecoder()
+            do {
+                viewModel.arrayOfDelleted = try decoder.decode([MovieDetailsModel].self, from: data)
+                
+            } catch {
+                print("Error decoding item array: \(error.localizedDescription)")
+            }
+        }
+    }
+    
     @IBAction func xBtnTapp(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
     }
     
     @IBAction func nameChanged(_ sender: Any) {
-        if let name = searchField.text, name.count > 1{
-            viewModel.updateMovieName(movie: name)
+        if let movie = searchField.text, let count = searchField.text?.count {
+            if count > 0 {
+                viewModel.updateMovieName(movie: movie)
+            } else {
+                viewModel.results.removeAll()
+                moviesTable.reloadData()
+            }
         }
     }
 }
@@ -63,7 +86,6 @@ extension SearchViewController: UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let myCell = moviesTable.dequeueReusableCell(withIdentifier: String(describing: SearchMovieCell.self), for: indexPath) as! SearchMovieCell
-        
         myCell.setup(results: viewModel.results[indexPath.row])
         return myCell
     }

@@ -6,3 +6,8 @@
 //
 
 import Foundation
+
+class MainViewModel{
+    var favouriteMovies : [MovieDetailsModel] = []
+    var dataLoad : Box<Bool> = Box(false)
+}
